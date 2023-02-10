@@ -13,8 +13,6 @@ function verifyToken(req, res, next) {
         req.user = decodedToken;
     }
     catch (err) {
-        console.error(err);
-
         return res.status(401).send('Not Authorised!');
     }
 
